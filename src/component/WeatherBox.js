@@ -11,7 +11,7 @@ const WeatherBox = ({weather}) => {
         <h5 align="center">{weather?.name} </h5>
         <h4>섭씨 : {weather?.main.temp} ℉</h4>
         <h4>화씨 : {fahrenheit} ℃</h4>
-        <h5>날씨 : {weather?.weather[0].description}</h5>
+        <h4>날씨 : {weather?.weather[0].description}</h4>
     </div>
   )
 }
