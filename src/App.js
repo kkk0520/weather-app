@@ -51,8 +51,9 @@ function App() {
     setWeather(data)
     setLoading(false)
   }
+  
   useEffect(() => {
-    if(city == ""){
+    if(city === ""){
       getCurrentLocation();
     } else {
       getWeatherByCity()
