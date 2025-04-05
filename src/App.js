@@ -15,6 +15,7 @@ import WeatherButton from './component/WeatherButton';
 function App() {
   const [weather, setWeather] = useState(null)
   const cities=['toronto', 'new york', 'laos', 'seoul']
+  const OPENWEATHER_API_KEY = process.env.REACT_APP_OPENWEATHER_API_KEY
   const getCurrentLocation = () => {
     console.log("+++ getCurrentLocation")
     navigator.geolocation.getCurrentPosition((position) => {
@@ -26,7 +27,7 @@ function App() {
   }
 
   const getWeatherByCurrentLocation = async (lat, lon) => {
-    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=8bbccc0c7cce0644ac77ee18ace19903&units=metric`
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${OPENWEATHER_API_KEY}&units=metric`
     let response = await fetch(url)
     let data = await response.json()
     console.log("날씨 DATA : ", data)
