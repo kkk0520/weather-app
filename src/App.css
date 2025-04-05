@@ -14,15 +14,40 @@ body {
 }
 
 .weather-box{
-  border: 3px solid aliceblue;
-  padding: 50px;
-  border-radius: 30px;
-  background-color: aliceblue
+  width: 28%;
+  max-width: 375px;
+  min-width: 375px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 1.5rem;
+  border-radius: 10%;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .weather-button{
-  padding: 20px;
+  margin:30px;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap:10px;
+}
+
+.weather-info-location {
+  font-size: 2rem;
+  margin-top: 5px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.weather-info {
+  font-size: 1.5rem;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.weather-info-icon {
+  margin-left: auto;
+  margin-right: auto;
 }
